@@ -19,7 +19,7 @@ import psycopg2
 from flask_cors import CORS
 
 app = flask.Flask(__name__)
-
+CORS(app)
 
 # Root page
 @app.route('/api', strict_slashes=False, methods=['GET'])
