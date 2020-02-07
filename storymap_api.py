@@ -20,12 +20,14 @@ from flask_cors import CORS
 
 app = flask.Flask(__name__)
 CORS(app)
+logging.getLogger('flask_cors').level = logging.DEBUG
+print("MN VERSION")
 
 # Root page
 @app.route('/api', strict_slashes=False, methods=['GET'])
-@cross_origin()
+#@cross_origin()
 @app.route('/api/v1', strict_slashes=False, methods=['GET'])
-@cross_origin()
+#@cross_origin()
 @app.route('/', methods=['GET'])
 def home():
     return '''<h1>StoryMap API</h1>
