@@ -22,13 +22,11 @@ import psycopg2
 from flask_cors import CORS
 
 app = flask.Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/api/*": {"origins": "*"}})
 
 # Root page
 @app.route('/api', strict_slashes=False, methods=['GET'])
-#@cross_origin()
 @app.route('/api/v1', strict_slashes=False, methods=['GET'])
-#@cross_origin()
 @app.route('/', methods=['GET'])
 def home():
     return '''<h1>StoryMap API</h1>
