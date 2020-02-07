@@ -20,7 +20,7 @@ from flask_cors import CORS
 
 app = flask.Flask(__name__)
 CORS(app)
-logging.getLogger('flask_cors').level = logging.DEBUG
+#logging.getLogger('flask_cors').level = logging.DEBUG
 print("MN VERSION")
 
 # Root page
