@@ -8,6 +8,9 @@ Stephen Nolan
 Laura Bookman
 Haley Snellen
 Arizona Geological Survey
+Reed McEwan
+Brian Grivna
+University of Minnesota
 '''
 
 import collections
@@ -20,8 +23,6 @@ from flask_cors import CORS
 
 app = flask.Flask(__name__)
 CORS(app)
-#logging.getLogger('flask_cors').level = logging.DEBUG
-print("MN VERSION")
 
 # Root page
 @app.route('/api', strict_slashes=False, methods=['GET'])
